@@ -3,7 +3,6 @@ from flask_cors import CORS
 from init import init_app2
 
 application,db=init_app2()
-CORS(application)
 
 @application.route('/')
 def index():
