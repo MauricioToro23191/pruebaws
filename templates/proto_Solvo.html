@@ -13,7 +13,6 @@
     <div id="cont">
         <h2>Login</h2> <br>
         <form action="/usuario/login" id="log" method="POST">
-            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
             <p id="iconsolvo"></p>
             {% with messages = get_flashed_messages() %} {% if messages %}
             <br /> {% for message in messages %}
