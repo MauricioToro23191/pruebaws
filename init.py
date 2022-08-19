@@ -14,8 +14,7 @@ def init_app():
     app.config['MYSQL_PASSWORD']=''
     app.config['MYSQL_DB']='solvo'
     #se agregan los blueprints para segmentar las rutas de la pagina web 
-    app.register_blueprint(estados)
-    app.register_blueprint(usuarios)
+    
     db=MySQL(app)
     return app,db
 
@@ -31,8 +30,8 @@ def init_app2():
     app.config['MYSQL_PASSWORD']='bfe2d3e7'
     app.config['MYSQL_DB']='heroku_6d336b1af578ed7'
     #se agregan los blueprints para segmentar las rutas de la pagina web 
-    app.register_blueprint(estados)
-    app.register_blueprint(usuarios)
+    #app.register_blueprint(estados)
+    #app.register_blueprint(usuarios)
     db=MySQL(app)
     return app,db
  
