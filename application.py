@@ -10,7 +10,7 @@ def index():
     return render_template('proto_Solvo.html')
 
 @application.route('/usuario/login',methods=['GET', 'POST'])
-def index2():
+def Hola():
     user=User(0, request.form['user'],None,None,request.form['pass'])
     R=ModelUser.login(db,user)
     return jsonify(R.__dict__)
