@@ -7,7 +7,7 @@ application,db=init_app2()
 
 @application.route('/')
 def index():
-    return render_template('proto_Solvo.html')
+    return render_template('index.html')
 
 @application.route('/usuario/login',methods=['GET', 'POST'])
 def Hola():
