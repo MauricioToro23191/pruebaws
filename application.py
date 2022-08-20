@@ -9,7 +9,7 @@ application,db=init_app2()
 def index():
     return render_template('index.html')
 
-@application.route('/usuario/login',methods=['GET', 'POST'])
+@application.route('/login',methods=['GET', 'POST'])
 def Hola():
     user=User(0, request.form['user'],None,None,request.form['pass'])
     R=ModelUser.login(db,user)
