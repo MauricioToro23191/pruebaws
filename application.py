@@ -1,9 +1,17 @@
-from flask import render_template,request,jsonify
+from flask import Flask,render_template,request,jsonify
 from ModelUser import ModelUser
 from entities.User import User
-from init import init_app2
+from flask_mysqldb import MySQL
 
-application,db=init_app2()
+application=Flask(__name__)
+application.secret_key='mysecretkey'
+#configuracion de la Base de datos 
+application.config['MYSQL_HOST']='us-cdbr-east-06.cleardb.net'
+application.config['MYSQL_USER']='b1a740d25c64d3'
+application.config['MYSQL_PASSWORD']='bfe2d3e7'
+application.config['MYSQL_DB']='heroku_6d336b1af578ed7'
+
+db=MySQL(application)
 
 @application.route('/')
 def index():
